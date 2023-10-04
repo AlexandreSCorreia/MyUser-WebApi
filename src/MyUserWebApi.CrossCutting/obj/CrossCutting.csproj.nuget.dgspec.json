@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj": {}
+    "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj": {
+    "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj",
         "projectName": "CrossCutting",
-        "projectPath": "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj",
+        "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\obj\\",
+        "outputPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

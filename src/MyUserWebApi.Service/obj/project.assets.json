@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj",
+      "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.Service\\obj\\",
+      "outputPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

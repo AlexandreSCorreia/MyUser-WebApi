@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UwmwEsOPPtom7QubmiByRJTdFFpLkCU8MGkfdPfgJ+ETn+Y4964INphdiG1uG9d5DgR3g88ktv4X6OjeKWvx5Q==",
+  "dgSpecHash": "/gAc/CROhXfkLEpDXtYTYgIgZif3TprEmRnDpuVCLWjdSkO/hcnA//o4/FQFWzyNJYu45HLkHmup+K0dqFt9GA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Videos\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
