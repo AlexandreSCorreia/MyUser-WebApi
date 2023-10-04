@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "MyUserWebApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "MyUserWebApi.Domain\Domain.csproj", "{16730CF9-8EFB-4BD9-BA13-AF7EE16B4F7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "MyUserWebApi.CrossCutting\CrossCutting.csproj", "{99A5715C-08CD-4D37-A3C6-BC58A2998246}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{16730CF9-8EFB-4BD9-BA13-AF7EE16B4F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16730CF9-8EFB-4BD9-BA13-AF7EE16B4F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16730CF9-8EFB-4BD9-BA13-AF7EE16B4F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A5715C-08CD-4D37-A3C6-BC58A2998246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A5715C-08CD-4D37-A3C6-BC58A2998246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A5715C-08CD-4D37-A3C6-BC58A2998246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A5715C-08CD-4D37-A3C6-BC58A2998246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
