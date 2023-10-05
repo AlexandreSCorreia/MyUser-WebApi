@@ -782,6 +782,16 @@
             "rid": "win"
           }
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
       }
     }
   },
@@ -2003,10 +2013,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../MyUserWebApi.Domain/Domain.csproj",
+      "msbuildProject": "../MyUserWebApi.Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.8"
@@ -2038,7 +2054,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Domain\\Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
