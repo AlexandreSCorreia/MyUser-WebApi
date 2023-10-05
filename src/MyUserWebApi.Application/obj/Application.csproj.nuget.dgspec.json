@@ -105,7 +105,17 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Data\\Data.csproj"
+              },
+              "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Domain\\Domain.csproj"
+              },
+              "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Service\\Service.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -117,6 +127,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -293,9 +309,6 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj": {
-                "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj"
-              },
               "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Data\\Data.csproj": {
                 "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Data\\Data.csproj"
               },

@@ -1,7 +1,11 @@
+using MyUserWebApi.CrossCutting.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+ConfigureService.ConfigureDependenciesService(builder.Services);
+ConfigureRepository.ConfigureDependenciesRepository(builder.Services);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

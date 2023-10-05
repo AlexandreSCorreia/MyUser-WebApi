@@ -738,16 +738,6 @@
           }
         }
       },
-      "CrossCutting/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/CrossCutting.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CrossCutting.dll": {}
-        }
-      },
       "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1937,11 +1927,6 @@
         "version.txt"
       ]
     },
-    "CrossCutting/1.0.0": {
-      "type": "project",
-      "path": "../MyUserWebApi.CrossCutting/CrossCutting.csproj",
-      "msbuildProject": "../MyUserWebApi.CrossCutting/CrossCutting.csproj"
-    },
     "Data/1.0.0": {
       "type": "project",
       "path": "../MyUserWebApi.Data/Data.csproj",
@@ -1955,7 +1940,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "CrossCutting >= 1.0.0",
       "Data >= 1.0.0",
       "Domain >= 1.0.0"
     ]
@@ -1987,9 +1971,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj": {
-              "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.CrossCutting\\CrossCutting.csproj"
-            },
             "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Data\\Data.csproj": {
               "projectPath": "C:\\Users\\User\\3D Objects\\MyUser-WebApi\\src\\MyUserWebApi.Data\\Data.csproj"
             },
