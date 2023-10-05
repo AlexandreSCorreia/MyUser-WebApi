@@ -15,9 +15,26 @@ namespace MyUserWebApi.Data.Repository
             this._context = context;
             this._dataset = _context.Set<T>();
         }
-        public Task<bool> DeleteAsync(Guid id)
+        
+        public async Task<bool> DeleteAsync(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await _dataset.SingleOrDefaultAsync(p => p.Id.Equals(id));
+                if(result == null)
+                {
+                    return false;
+                }
+
+                this._dataset.Remove(result);
+                await this._context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {               
+                throw ex;
+            }  
         }
 
         public async Task<T> InsertAsync(T item)
