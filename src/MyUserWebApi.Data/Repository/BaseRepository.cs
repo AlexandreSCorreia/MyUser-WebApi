@@ -15,7 +15,7 @@ namespace MyUserWebApi.Data.Repository
             this._context = context;
             this._dataset = _context.Set<T>();
         }
-        
+
         public async Task<bool> DeleteAsync(Guid id)
         {
             try
@@ -57,6 +57,11 @@ namespace MyUserWebApi.Data.Repository
             }
 
             return item;
+        }
+
+        public async Task<bool> ExistAsync(Guid id)
+        {
+            return await _dataset.AnyAsync(p => p.Id.Equals(id));
         }
 
         public Task<T> SelectAsync(Guid id)
