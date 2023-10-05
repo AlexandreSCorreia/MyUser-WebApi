@@ -52,9 +52,28 @@ namespace MyUserWebApi.Data.Repository
             throw new NotImplementedException();
         }
 
-        public Task<T> UpdateAsync(T item)
+        public async Task<T> UpdateAsync(T item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await _dataset.SingleOrDefaultAsync(p => p.Id.Equals(item.Id));
+                if(result == null)
+                {
+                    return null;
+                }
+
+                item.UpdateAt = DateTime.UtcNow;
+                item.CreateAt = result.CreateAt;
+
+                this._context.Entry(result).CurrentValues.SetValues(item);
+                await this._context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {               
+                throw ex;
+            }
+
+            return item;
         }
     }
 }
