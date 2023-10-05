@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyUserWebApi.Domain\Domain.csproj" />
+    <ProjectReference Include="..\MyUserWebApi.Service\Service.csproj" />
+    <ProjectReference Include="..\MyUserWebApi.CrossCutting\CrossCutting.csproj" />
+  </ItemGroup>
+
 </Project>
