@@ -9,7 +9,23 @@ ConfigureRepository.ConfigureDependenciesRepository(builder.Services);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c => {
+    c.SwaggerDoc("v1", new OpenApiInfo{
+        Version = "v1",
+        Title = "API AspNetCore 7.0",
+        Description = "Arquitetura DDD",
+        TermsOfService = new Uri("http://www.testeinfo.com.br"),
+        Contact = new OpenApiContact{
+            Name = "Alexandre Correia",
+            Email = "alex.sol.correia@gmail.com",
+            Url = new Uri("http://www.testeinfo.com.br"),
+        },
+        License = new OpenApiLicense{
+            Name = "Termo de Licença",
+            Url = new Uri("http://www.testeinfo.com.br")
+        }
+    });
+});
 
 var app = builder.Build();
 
@@ -17,7 +33,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API AspNetCore 7.0");
+        c.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();
