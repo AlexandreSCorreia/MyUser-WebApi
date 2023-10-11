@@ -1,5 +1,6 @@
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
+using MyUserWebApi.Domain.Entities;
 using MyUserWebApi.Domain.Interfaces.Services.User;
 
 namespace MyUserWebApi.Application.Controllers
@@ -108,7 +109,7 @@ namespace MyUserWebApi.Application.Controllers
 
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(GuiId id)
+        public async Task<ActionResult> Delete(Guid id)
         {
             if(!ModelState.IsValid)
             {
