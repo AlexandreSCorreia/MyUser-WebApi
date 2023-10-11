@@ -1,3 +1,4 @@
+using Microsoft.OpenApi.Models;
 using MyUserWebApi.CrossCutting.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
