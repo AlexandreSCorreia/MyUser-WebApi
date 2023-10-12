@@ -1,4 +1,4 @@
-using MyUserWebApi.Domain.Entities;
+using MyUserWebApi.Domain.Dtos;
 using MyUserWebApi.Domain.Interfaces.Services.User;
 using MyUserWebApi.Domain.Repository;
 
@@ -13,7 +13,7 @@ namespace MyUserWebApi.Service.Services
             this._repository = repository;
         }
 
-        public async Task<object> FindByLogin(UserEntity user)
+        public async Task<object> FindByLogin(LoginDto user)
         {
             if(user != null && !string.IsNullOrWhiteSpace(user.Email))
             {

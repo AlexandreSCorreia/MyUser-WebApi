@@ -1,10 +1,9 @@
-
-using MyUserWebApi.Domain.Entities;
+using MyUserWebApi.Domain.Dtos;
 
 namespace MyUserWebApi.Domain.Interfaces.Services.User
 {
     public interface ILoginService
     {
-        Task<Object> FindByLogin(UserEntity user);
+        Task<Object> FindByLogin(LoginDto user);
     }
 }
