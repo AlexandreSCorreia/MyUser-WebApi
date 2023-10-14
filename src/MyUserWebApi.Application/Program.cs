@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using MyUserWebApi.CrossCutting.DependencyInjection;
+using MyUserWebApi.Domain.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 ConfigureService.ConfigureDependenciesService(builder.Services);
 ConfigureRepository.ConfigureDependenciesRepository(builder.Services);
+
+var signingConfigurations = new SigningConfigurations();
+builder.Services.AddSingleton(signingConfigurations);
+
+var tokenConfigurations = new TokenConfigurations();
+new ConfigureFromConfigurationOptions<TokenConfigurations>(
+    builder.Configuration.GetSection("TokenConfigurations"))
+        .Configure(tokenConfigurations);
+builder.Services.AddSingleton(tokenConfigurations);
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
