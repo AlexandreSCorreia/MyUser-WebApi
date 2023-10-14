@@ -63,6 +63,27 @@ builder.Services.AddSwaggerGen(c => {
             Url = new Uri("http://www.testeinfo.com.br")
         }
     });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Entre com o Token JWT",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference{
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            }, new List<String>()
+        }
+    });
 });
 
 var app = builder.Build();
