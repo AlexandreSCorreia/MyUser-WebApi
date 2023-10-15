@@ -1,13 +1,14 @@
+using MyUserWebApi.Domain.Dtos.User;
 using MyUserWebApi.Domain.Entities;
 
 namespace MyUserWebApi.Domain.Interfaces.Services.User
 {
     public interface IUserService
     {
-        Task<UserEntity> Get(Guid id);
-        Task<IEnumerable<UserEntity>> GetAll();
-        Task<UserEntity> Post(UserEntity user);
-        Task<UserEntity> Put(UserEntity user);
+        Task<UserDto> Get(Guid id);
+        Task<IEnumerable<UserDto>> GetAll();
+        Task<UserDtoCreateResult> Post(UserDto user);
+        Task<UserDtoUpdateResult> Put(UserDto user);
         Task<bool> Delete(Guid id);
     }
 }
