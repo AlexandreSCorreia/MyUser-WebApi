@@ -1,5 +1,4 @@
 using MyUserWebApi.Domain.Dtos.User;
-using MyUserWebApi.Domain.Entities;
 
 namespace MyUserWebApi.Domain.Interfaces.Services.User
 {

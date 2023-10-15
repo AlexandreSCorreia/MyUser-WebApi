@@ -1,9 +1,11 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using MyUserWebApi.CrossCutting.DependencyInjection;
+using MyUserWebApi.CrossCutting.Mappings;
 using MyUserWebApi.Domain.Security;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 ConfigureService.ConfigureDependenciesService(builder.Services);
 ConfigureRepository.ConfigureDependenciesRepository(builder.Services);
+
+var config = new AutoMapper.MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new DtoToModelProfile());
+    cfg.AddProfile(new EntityToDtoProfile());
+    cfg.AddProfile(new ModelToEntityProfile());
+});
+
+IMapper mapper = config.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 var signingConfigurations = new SigningConfigurations();
 builder.Services.AddSingleton(signingConfigurations);
