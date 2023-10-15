@@ -8,6 +8,10 @@ namespace MyUserWebApi.Domain.Dtos.User
         [StringLength(60, ErrorMessage = "Name deve ter no máximo {1} caracteres.")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "SurName é campo obrigatório")]
+        [StringLength(60, ErrorMessage = "SurName deve ter no máximo {1} caracteres.")]
+        public string SurName { get; set; }
+
         [Required(ErrorMessage = "Email é campo obrigatório")]
         [EmailAddress(ErrorMessage = "E-mail em formato inválido.")]
         [StringLength(100, ErrorMessage = "Email deve ter no máximo {1} caracteres.")]

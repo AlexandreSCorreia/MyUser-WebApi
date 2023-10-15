@@ -20,6 +20,13 @@ namespace MyUserWebApi.Domain.Models
             get { return _name; }
             set { _name = value; }
         }
+
+        private string _surName;
+        public string SurName
+        {
+            get { return _surName; }
+            set { _surName = value; }
+        }
         
         private string _email;
         public string Email
