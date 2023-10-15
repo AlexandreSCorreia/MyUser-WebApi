@@ -1,11 +1,12 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using MyUserWebApi.CrossCutting.DependencyInjection;
 using MyUserWebApi.CrossCutting.Mappings;
+using MyUserWebApi.Data.Context;
 using MyUserWebApi.Domain.Security;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -115,5 +116,17 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+if (Environment.GetEnvironmentVariable("MIGRATION").ToLower() == "APLICAR".ToLower())
+{
+    using (var service = app.Services.GetRequiredService<IServiceScopeFactory>()
+                                    .CreateScope())
+    {
+        using (var context = service.ServiceProvider.GetService<AppDbContext>())
+        {
+            context.Database.Migrate();
+        }
+    }
+}
 
 app.Run();

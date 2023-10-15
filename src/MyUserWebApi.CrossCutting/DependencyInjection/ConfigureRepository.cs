@@ -15,8 +15,18 @@ namespace MyUserWebApi.CrossCutting.DependencyInjection
             serviceColletion.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             serviceColletion.AddScoped<IUserRepository, UserImplementation>();
         
-            serviceColletion.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer("Server=localhost,1450;Initial Catalog=MyApi;MultipleActiveResultSets=true;User ID=SA;Password=Numsey#2022"));
+            if(Environment.GetEnvironmentVariable("DATABASE").ToLower() == "SQLSERVER".ToLower())
+            {
+                serviceColletion.AddDbContext<AppDbContext>(
+                    options => options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION"))
+                );
+            }
+            else
+            {
+                // serviceColletion.AddDbContext<AppDbContext>(
+                //     options => options.UseMySql(Environment.GetEnvironmentVariable("DB_CONNECTION"))
+                // );
+            }
 
         }
     }
